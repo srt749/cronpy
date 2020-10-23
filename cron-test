@@ -1,2 +1,2 @@
-* * * * * /home/job.sh > /var/log/cron-test.log 2>&1
+* * * * * /usr/local/bin/python3 /home/main.py > /var/log/cron.log 2>&1
 # an empty line

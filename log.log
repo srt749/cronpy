@@ -1,0 +1,12 @@
+ 2020-10-23 18:50:01,643 -  DEBUG -  Start of program
+ 2020-10-23 18:50:01,644 -  DEBUG -  Start of factorial(5%)
+ 2020-10-23 18:50:01,644 -  DEBUG -  i is 0, total is 0
+ 2020-10-23 18:50:01,644 -  DEBUG -  i is 1, total is 0
+ 2020-10-23 18:50:01,644 -  DEBUG -  i is 2, total is 0
+ 2020-10-23 18:50:01,645 -  DEBUG -  i is 3, total is 0
+ 2020-10-23 18:50:01,645 -  DEBUG -  i is 4, total is 0
+ 2020-10-23 18:50:01,645 -  DEBUG -  i is 5, total is 0
+ 2020-10-23 18:50:01,646 -  DEBUG -  End of factorial(5%)
+ 2020-10-23 18:50:01,646 -  DEBUG -  End of program
+0
+hello

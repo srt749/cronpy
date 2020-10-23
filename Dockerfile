@@ -24,13 +24,13 @@ RUN chmod +x /home/job.sh
 RUN crontab /etc/cron.d/hello-cron
 
 # Create the log file to be able to run tail
-# RUN touch /var/log/cron.log 
+RUN touch /var/log/cron.log 
 RUN touch /var/log/main.log 
 
 # Run the command on container startup
 # CMD ["crond", "-f", "-d", "8"]
 # CMD cron start && tail -f /var/log/main.log
-# ENTRYPOINT cron start && tail -f /var/log/cron.log
+ENTRYPOINT cron start && tail -f /var/log/cron.log
 # ENTRYPOINT ["bin/bash"]
 # CMD python home/main.py
 

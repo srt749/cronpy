@@ -8,9 +8,9 @@ logging.FileHandler(
     encoding=None, 
     delay=False)
 
-# logging.basicConfig(
-#     level=logging.DEBUG, 
-#     format=' %(asctime)s -  %(levelname)s -  %(message)s')
+logging.basicConfig(
+    level=logging.DEBUG, 
+    format=' %(asctime)s -  %(levelname)s -  %(message)s')
 
 logging.debug('Start of program')
 
@@ -24,6 +24,8 @@ def factorial(n):
     return total
 
 print(factorial(5))
+
+print('hello')
 
 logging.debug('End of program')
 
