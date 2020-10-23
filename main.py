@@ -1,12 +1,14 @@
 ##!/usr/local/bin python
 
 import logging
+import shutil
+import datetime
 
-logging.FileHandler(
-    filename='/var/log/main.log',
-    mode='w', 
-    encoding=None, 
-    delay=False)
+# logging.FileHandler(
+#     filename='/var/log/main.log',
+#     mode='a', 
+#     encoding=None, 
+#     delay=False)
 
 logging.basicConfig(
     level=logging.DEBUG, 

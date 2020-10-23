@@ -1,4 +1,5 @@
 #!/bin/sh
 
 /usr/local/bin/python3 /home/main.py
-/home/job.sh
+
+# not using this file
