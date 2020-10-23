@@ -12,15 +12,14 @@ ADD cron-test /etc/cron.d/hello-cron
 COPY main.py /home
 COPY job.sh /home
 
-
 # Change line ending format to LF
 RUN dos2unix /etc/cron.d/hello-cron
 
 # Give execution rights on the cron job
 RUN chmod 0644 /etc/cron.d/hello-cron
 RUN chmod 0744 /home/main.py
-RUN chmod 0755 /home/main.py
-RUN chmod +x /home/main.py
+# RUN chmod 0755 /home/main.py
+# RUN chmod +x /home/main.py
 RUN chmod +x /home/job.sh
 
 # Setup cron job
@@ -28,7 +27,8 @@ RUN chmod +x /home/job.sh
 RUN crontab /etc/cron.d/hello-cron
 
 # Create the log file to be able to run tail
-RUN touch /var/log/cron.log
+RUN touch /var/log/cron.log 
+RUN touch /var/log/py.log
 
 # Run the command on container startup
 # CMD ["crond", "-f", "-d", "8"]
