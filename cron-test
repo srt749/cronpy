@@ -1,2 +1,2 @@
-* * * * * /home/job.sh > /var/log/cron.log 2>&1
+* * * * * /home/job.sh > /var/log/cron-test.log 2>&1
 # an empty line

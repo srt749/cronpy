@@ -1,11 +1,8 @@
 FROM python:3.8-slim-buster
-# FROM alpine:latest
-# FROM ubuntu:latest
 
 # Install cron
 RUN apt-get update && apt-get -y install cron
 RUN apt-get update && apt-get install -y dos2unix
-
 
 # Add crontab file (from your windows host) to the cron directory
 ADD cron-test /etc/cron.d/hello-cron
@@ -27,12 +24,12 @@ RUN chmod +x /home/job.sh
 RUN crontab /etc/cron.d/hello-cron
 
 # Create the log file to be able to run tail
-RUN touch /var/log/cron.log 
-RUN touch /var/log/py.log
+# RUN touch /var/log/cron.log 
+RUN touch /var/log/main.log 
 
 # Run the command on container startup
 # CMD ["crond", "-f", "-d", "8"]
-CMD cron start && tail -f /var/log/cron.log
+# CMD cron start && tail -f /var/log/main.log
 # ENTRYPOINT cron start && tail -f /var/log/cron.log
 # ENTRYPOINT ["bin/bash"]
 # CMD python home/main.py

@@ -2,11 +2,15 @@
 
 import logging
 
-logging.basicConfig(
-    filename='/var/log/py.log',
-    filemode='a',
-    level=logging.DEBUG, 
-    format=' %(asctime)s -  %(levelname)s -  %(message)s')
+logging.FileHandler(
+    filename='/var/log/main.log',
+    mode='w', 
+    encoding=None, 
+    delay=False)
+
+# logging.basicConfig(
+#     level=logging.DEBUG, 
+#     format=' %(asctime)s -  %(levelname)s -  %(message)s')
 
 logging.debug('Start of program')
 
