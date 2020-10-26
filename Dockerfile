@@ -9,6 +9,10 @@ RUN apt-get update \
 ADD cron-test /etc/cron.d/hello-cron
 COPY main.py /home
 
+# Preparing python env
+COPY requirements.txt /home
+RUN pip install -r /home/requirements.txt
+
 # Change line ending format to LF
 RUN dos2unix /etc/cron.d/hello-cron
 

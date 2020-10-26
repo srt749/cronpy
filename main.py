@@ -1,36 +1,44 @@
-##!/usr/local/bin python
-
+import json
 import logging
-import shutil
-import datetime
+from pprint import pprint
+import pandas as pd
+import requests
 
-# logging.FileHandler(
-#     filename='/var/log/main.log',
-#     mode='a', 
-#     encoding=None, 
-#     delay=False)
-
-logging.basicConfig(
-    level=logging.DEBUG, 
-    format=' %(asctime)s -  %(levelname)s -  %(message)s')
-
-logging.debug('Start of program')
-
-def factorial(n):
-    logging.debug('Start of factorial(%s%%)'  % (n))
-    total = 1
-    for i in range(n + 1):
-        total *= i
-        logging.debug('i is ' + str(i) + ', total is ' + str(total))
-    logging.debug('End of factorial(%s%%)'  % (n))
-    return total
-
-print(factorial(5))
-
-print('hello')
-
-logging.debug('End of program')
-
-# Try to write a log file, maybe with logging module
-# logging module: https://automatetheboringstuff.com/2e/chapter11/
-# Set up a Docker volume, in the run command
+logging.basicConfig(filename='status.log', level=logging.INFO)
+def main():
+    print('started')
+    records = pd.read_csv(
+        'https://docs.google.com/spreadsheets/d/1xBOlJmVv-aZf3dLBU3QL8OHkM2ADVTkgxriaCrccgjQ/export?format=csv').to_dict('records')
+    for record in records:
+        messages = []
+        for lang_website in ['En_website', 'Fr_website']:
+            website = record[lang_website]
+            if website.startswith('www.'):
+                website = 'http://' + website
+            if website == 'na' or 'gov.nl.ca' in website:
+                pass
+            else:
+                try:
+                    r = requests.get(website)
+                    status = r.status_code
+                    if status in [200, 301]:
+                        logging.info(f'Functioning correctly: {website}')
+                        continue
+                    else:
+                        issue = {
+                            'HR_UID': record['HR_UID'],
+                            'Province': record['Province'],
+                            'health_region': record['health_region'],
+                            'url': website,
+                            'status_code': r.status_code
+                        }
+                        messages.append(issue)
+                        logging.warning(
+                            f'Malfunctioning link: {website} \n Details: {issue}')
+                except Exception as e:
+                    logging.error(
+                        f'Could not retrieve {website}.\nError details: {e}')
+                    continue
+    # json.dumps(messages, indent=2)
+if __name__ == "__main__":
+    main()
