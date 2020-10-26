@@ -4,7 +4,11 @@ from pprint import pprint
 import pandas as pd
 import requests
 
-logging.basicConfig(filename='status.log', level=logging.INFO)
+logging.basicConfig(
+    # filename='status.log', 
+    level=logging.INFO,
+    format=' %(asctime)s -  %(levelname)s -  %(message)s')
+
 def main():
     print('started')
     records = pd.read_csv(

@@ -1,12 +1,28 @@
- 2020-10-26 18:13:01,580 -  DEBUG -  Start of program
- 2020-10-26 18:13:01,581 -  DEBUG -  Start of factorial(5%)
- 2020-10-26 18:13:01,581 -  DEBUG -  i is 0, total is 0
- 2020-10-26 18:13:01,581 -  DEBUG -  i is 1, total is 0
- 2020-10-26 18:13:01,582 -  DEBUG -  i is 2, total is 0
- 2020-10-26 18:13:01,582 -  DEBUG -  i is 3, total is 0
- 2020-10-26 18:13:01,582 -  DEBUG -  i is 4, total is 0
- 2020-10-26 18:13:01,582 -  DEBUG -  i is 5, total is 0
- 2020-10-26 18:13:01,583 -  DEBUG -  End of factorial(5%)
- 2020-10-26 18:13:01,583 -  DEBUG -  End of program
-0
-hello
+ 2020-10-26 18:24:02,361 -  INFO -  Functioning correctly: https://www.albertahealthservices.ca/zones/calgary-zone.aspx
+ 2020-10-26 18:24:02,629 -  INFO -  Functioning correctly: https://www.albertahealthservices.ca/zones/central-zone.aspx
+ 2020-10-26 18:24:02,906 -  INFO -  Functioning correctly: https://www.albertahealthservices.ca/languages/languages.aspx
+ 2020-10-26 18:24:03,219 -  INFO -  Functioning correctly: https://www.albertahealthservices.ca/zones/edmonton-zone.aspx
+ 2020-10-26 18:24:03,507 -  INFO -  Functioning correctly: https://www.albertahealthservices.ca/zones/north-zone.aspx
+ 2020-10-26 18:24:03,835 -  INFO -  Functioning correctly: https://www.albertahealthservices.ca/zones/south-zone.aspx
+ 2020-10-26 18:24:04,552 -  INFO -  Functioning correctly: https://www.fraserhealth.ca/health-topics-a-to-z/coronavirus#.XqeSQWhKg2w
+ 2020-10-26 18:24:05,834 -  INFO -  Functioning correctly: https://news.interiorhealth.ca/covid-19/
+ 2020-10-26 18:24:06,013 -  INFO -  Functioning correctly: https://www.islandhealth.ca/learn-about-health/covid-19/outbreaks-and-exposures
+ 2020-10-26 18:24:06,221 -  INFO -  Functioning correctly: https://www.northernhealth.ca/health-topics/coronavirus-information-covid-19#trusted-information#northern-health
+ 2020-10-26 18:24:07,284 -  INFO -  Functioning correctly: http://www.vch.ca/covid-19
+ 2020-10-26 18:24:10,032 -  INFO -  Functioning correctly: https://www.ierha.ca/default.aspx?cid=23748&lang=1
+ 2020-10-26 18:24:11,331 -  INFO -  Functioning correctly: https://northernhealthregion.com/covid-19-updates/
+ 2020-10-26 18:24:11,929 -  INFO -  Functioning correctly: https://www.prairiemountainhealth.ca/public-alerts/20-miscellaneous/809-current-outbreaks
+ 2020-10-26 18:24:13,248 -  INFO -  Functioning correctly: https://www.southernhealth.ca/en/hp/novel-coronavirus-outbreak/
+ 2020-10-26 18:24:14,370 -  INFO -  Functioning correctly: https://wrha.mb.ca/infection-prevention-control/outbreaks/
+ 2020-10-26 18:24:14,575 -  INFO -  Functioning correctly: https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19.html
+ 2020-10-26 18:24:14,778 -  INFO -  Functioning correctly: https://www2.gnb.ca/content/gnb/fr/corporate/promo/covid-19.html
+ 2020-10-26 18:24:15,027 -  INFO -  Functioning correctly: https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19.html
+ 2020-10-26 18:24:15,233 -  INFO -  Functioning correctly: https://www2.gnb.ca/content/gnb/fr/corporate/promo/covid-19.html
+ 2020-10-26 18:24:15,433 -  INFO -  Functioning correctly: https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19.html
+ 2020-10-26 18:24:15,637 -  INFO -  Functioning correctly: https://www2.gnb.ca/content/gnb/fr/corporate/promo/covid-19.html
+ 2020-10-26 18:24:15,841 -  INFO -  Functioning correctly: https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19.html
+ 2020-10-26 18:24:16,045 -  INFO -  Functioning correctly: https://www2.gnb.ca/content/gnb/fr/corporate/promo/covid-19.html
+ 2020-10-26 18:24:16,252 -  INFO -  Functioning correctly: https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19.html
+ 2020-10-26 18:24:16,473 -  INFO -  Functioning correctly: https://www2.gnb.ca/content/gnb/fr/corporate/promo/covid-19.html
+ 2020-10-26 18:24:16,677 -  INFO -  Functioning correctly: https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19.html
+ 2020-10-26 18:24:16,889 -  INFO -  Functioning correctly: https://www2.gnb.ca/content/gnb/fr/corporate/promo/covid-19.html
