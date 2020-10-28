@@ -6,17 +6,19 @@ import requests
 
 logging.basicConfig(
     # filename='status.log', 
-    level=logging.INFO,
+    level=logging.DEBUG,
     format=' %(asctime)s -  %(levelname)s -  %(message)s')
 
 def main():
     print('started')
     records = pd.read_csv(
-        'https://docs.google.com/spreadsheets/d/1xBOlJmVv-aZf3dLBU3QL8OHkM2ADVTkgxriaCrccgjQ/export?format=csv').to_dict('records')
+        'https://docs.google.com/spreadsheets/d/18Ewg6U8-JhXkYPLyREFLdVF0ioXSwzKvw5ousLxcKQc/export?format=csv').to_dict('records')
     for record in records:
         messages = []
         for lang_website in ['En_website', 'Fr_website']:
             website = record[lang_website]
+            if isinstance(website, float):
+                website = str(website)
             if website.startswith('www.'):
                 website = 'http://' + website
             if website == 'na' or 'gov.nl.ca' in website:
@@ -26,7 +28,7 @@ def main():
                     r = requests.get(website)
                     status = r.status_code
                     if status in [200, 301]:
-                        logging.info(f'Functioning correctly: {website}')
+                        logging.debug(f'Functioning correctly: {website}')
                         continue
                     else:
                         issue = {

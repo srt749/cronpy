@@ -1,0 +1,8 @@
+ERROR -  Could not retrieve http://www.healthunit.com/.
+2020-10-26T20:17:40.637039800Z Error details: HTTPSConnectionPool(host='www.healthunit.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:1124)')))
+
+ERROR -  Could not retrieve https://www.myhealthunit.ca/en/index.asp.
+2020-10-26T20:17:41.012197700Z Error details: HTTPSConnectionPool(host='www.myhealthunit.ca', port=443): Max retries exceeded with url: /en/index.asp (Caused by SSLError(SSLError(1, '[SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:1124)')))
+
+ERROR -  Could not retrieve http://www.lambtonhealth.on.ca/.
+2020-10-26T20:17:38.707079900Z Error details: HTTPSConnectionPool(host='lambtonpublichealth.ca%20', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb7a0bea670>: Failed to establish a new connection: [Errno -2] Name or service not known'))
